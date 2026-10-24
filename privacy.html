@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Viora Privacy Policy</title>
+<meta name="description" content="How Viora, the AI health coach app, handles your information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one reading column with a contents rail on wide screens; Viora's Lavender mist palette. */
+:root {
+  --ground: #F7F5FD;
+  --card: #FFFFFF;
+  --ink: #1D1830;
+  --muted: #5E5774;
+  --line: #E6E0F5;
+  --violet: #5B40C9;
+  --tint: #F0ECFE;
+  --mint: #1F7F6B;
+  --font: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #13111B; --card: #1D1928; --ink: #F1EEFA; --muted: #A8A1BF; --line: #2C2640;
+    --violet: #B8A8FF; --tint: #2A2342; --mint: #6FD8BD; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #13111B; --card: #1D1928; --ink: #F1EEFA; --muted: #A8A1BF; --line: #2C2640;
+  --violet: #B8A8FF; --tint: #2A2342; --mint: #6FD8BD; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font: 16px/1.65 var(--font); padding-inline: 16px; padding-block: 0 64px; }
+.wrap { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; }
+header.top { max-width: 1040px; margin: 0 auto; padding-block: 40px 28px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.orb { width: 52px; height: 52px; border-radius: 50%; flex: none; background: radial-gradient(circle at 35% 30%, #FBF9FF 0%, #CDBFFD 45%, #8B6FF0 100%); box-shadow: 0 0 0 4px var(--tint); }
+header.top h1 { font-size: clamp(26px, 4vw, 34px); line-height: 1.15; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+header.top p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; font-size: 14px; }
+nav.toc p { text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; font-weight: 700; color: var(--muted); margin: 0 0 10px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; counter-reset: toc; }
+nav.toc li { counter-increment: toc; }
+nav.toc a { color: var(--muted); text-decoration: none; display: flex; gap: 8px; }
+nav.toc a::before { content: counter(toc); font-variant-numeric: tabular-nums; color: var(--violet); min-width: 16px; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--ink); }
+main { min-width: 0; max-width: 68ch; }
+main section { padding-block: 8px 20px; scroll-margin-top: 24px; }
+main h2 { font-size: 21px; line-height: 1.3; margin: 18px 0 8px; text-wrap: balance; }
+main h3 { font-size: 16px; margin: 18px 0 4px; }
+main p, main li { color: var(--ink); }
+main ul { padding-left: 20px; margin: 8px 0; display: grid; gap: 6px; }
+a { color: var(--violet); }
+a:focus-visible { outline: 2px solid var(--violet); outline-offset: 2px; border-radius: 4px; }
+.glance { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px 22px; margin-bottom: 8px; }
+.glance h2 { margin-top: 0; }
+.glance ul { list-style: none; padding: 0; gap: 10px; }
+.glance li { display: flex; gap: 10px; }
+.glance li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); flex: none; margin-top: 9px; }
+.note { background: var(--tint); border-radius: 14px; padding: 14px 16px; margin: 12px 0; }
+.table { overflow-x: auto; margin: 10px 0; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 560px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+.mail { font-weight: 600; user-select: all; }
+footer { color: var(--muted); font-size: 13px; margin-top: 24px; border-top: 1px solid var(--line); padding-top: 16px; }
+@media (max-width: 820px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  nav.toc { position: static; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; }
+  nav.toc ol { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  header.top { padding-block: 28px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="orb" aria-hidden="true"></div>
+  <div>
+    <h1>Viora Privacy Policy</h1>
+    <p>Effective 24 October 2026 · Viora – AI Health Coach for iPhone</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#collect">What Viora collects</a></li>
+      <li><a href="#health">Apple Health</a></li>
+      <li><a href="#myra">Myra, the AI coach</a></li>
+      <li><a href="#backup">Your encrypted backup</a></li>
+      <li><a href="#providers">Who processes your data</a></li>
+      <li><a href="#never">What we never do</a></li>
+      <li><a href="#keep">How long we keep it</a></li>
+      <li><a href="#choices">Your choices and rights</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#children">Age limit</a></li>
+      <li><a href="#medical">Not medical advice</a></li>
+      <li><a href="#changes">Changes and contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="glance">
+      <h2>At a glance</h2>
+      <ul>
+        <li>Your health information lives on your iPhone. Viora's servers only see what's needed to answer you, sign you in, and keep your encrypted backup.</li>
+        <li>We don't sell your data, show ads, or track you across other apps and websites.</li>
+        <li>Apple Health data is never copied into your backup and never used for advertising.</li>
+        <li>You can turn off the backup, export your data, or delete everything, including your account, from Settings at any time.</li>
+      </ul>
+    </div>
+
+    <section id="who">
+      <h2>1. Who we are</h2>
+      <p>Viora is made by Logistics Technology Solutions L.L.C. ("Logicsols", "we", "us"), a company registered in New York, USA. We are responsible for the personal information described in this policy.</p>
+      <p>Questions or requests about your privacy: <span class="mail">hello@logicsols.com</span></p>
+    </section>
+
+    <section id="collect">
+      <h2>2. What Viora collects</h2>
+      <h3>Information you give us</h3>
+      <ul>
+        <li><strong>Phone number</strong>, to sign you in with a one-time code sent by text message.</li>
+        <li><strong>Profile</strong>: first name, age, sex, height, weight and goal weight, your goals, diabetes status, how you eat (for example halal or vegetarian), foods you avoid, cuisines you like, alcohol habits, activity level, time you have to exercise, anything that hurts, your preferred units, and an optional profile photo.</li>
+        <li><strong>Medicines</strong>: name, dose, times, whether to take it with food, and what you take it for.</li>
+        <li><strong>Meals</strong>: meals you log, meal photos you take, and restaurant menu photos you scan.</li>
+        <li><strong>Health reports</strong>: photos or PDF files of lab reports you add, and the results Viora reads from them.</li>
+        <li><strong>Weight entries</strong>, water, walks and other daily check-ins.</li>
+        <li><strong>Conversations with Myra</strong>, typed or spoken.</li>
+      </ul>
+      <h3>Information Viora records as you use it</h3>
+      <ul>
+        <li><strong>Usage counts</strong>: how many times each day you use Myra's chat, meal photos, menu scans, report reading and voice. We store the count only, never what you asked or what was in the photo. We use these counts to understand how Viora is used and to keep the service running fairly.</li>
+        <li><strong>Technical logs</strong>: when your iPhone talks to our servers, our hosting provider records technical details such as the time, your IP address and whether the request worked. These logs are used for security and fixing problems.</li>
+      </ul>
+      <p>Viora does not use your location, contacts or advertising identifier.</p>
+    </section>
+
+    <section id="health">
+      <h2>3. Apple Health</h2>
+      <p>If you choose to connect Apple Health, Viora reads steps, active energy, heart rate, resting heart rate, sleep, weight, blood glucose and blood pressure. When you log your weight in Viora, it can also save that weight to Apple Health. You decide what Viora can read in the Health app, under Profile › Apps › Viora, and you can change it at any time.</p>
+      <p>Apple Health data stays on your iPhone. The only time a reading leaves your phone is when a recent value, such as today's steps or your latest glucose reading, is included in a request to Myra so she can answer you (see section 4). Apple Health data is never copied into your backup, never sold, and never used for advertising or marketing.</p>
+    </section>
+
+    <section id="myra">
+      <h2>4. Myra, the AI coach</h2>
+      <p>Myra's answers, meal photo analysis, menu suggestions and report reading are produced by an AI model from Anthropic. When you use one of these features, Viora sends Anthropic what's needed for that answer:</p>
+      <ul>
+        <li>your message and your recent conversation with Myra;</li>
+        <li>a summary of your profile, your medicines, what you've eaten today, your daily targets and any recent Apple Health readings (steps, sleep, glucose, blood pressure);</li>
+        <li>the meal photo, menu photo or report file, when you use those features.</li>
+      </ul>
+      <p>Your name and profile details help Myra give advice that fits you. Your phone number is never sent to the AI.</p>
+      <h3>Voice</h3>
+      <p>When you talk to Myra, your speech is turned into text by Apple's speech recognition. On iPhones that support it, this happens on the phone. Otherwise Apple processes the audio, under Apple's privacy policy. Viora does not store recordings of your voice.</p>
+      <p>When Myra reads a reply aloud with her natural voice, the text of her reply is sent to ElevenLabs to create the audio. If you turn off "Myra's natural voice" in Settings, replies are spoken by your iPhone's own voice and nothing is sent to ElevenLabs.</p>
+    </section>
+
+    <section id="backup">
+      <h2>5. Your encrypted backup</h2>
+      <p>Viora keeps an encrypted backup so that when you sign in on a new iPhone, your information comes back. The backup is on by default and covers your profile, meals, medicines, weights, reports, photos and chats with Myra. It does not include Apple Health data.</p>
+      <p>Each item is encrypted on your iPhone (AES-256) before it is uploaded, so our database and file storage only hold encrypted data. Your encryption key is created for you by Viora's server when you sign in.</p>
+      <div class="note"><strong>Plainly put:</strong> this is not end-to-end encryption. Because our server creates the keys, we could technically decrypt a backup. We don't do this except where we are legally required to, and access to the key is restricted.</div>
+      <p>You can turn the backup off in Settings › Back up my data. This deletes the cloud copy straight away and keeps your information on your iPhone only.</p>
+    </section>
+
+    <section id="providers">
+      <h2>6. Who processes your data</h2>
+      <p>We use these service providers to run Viora. Each one processes your information on our behalf, only to provide the feature listed.</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Provider</th><th>What it does for Viora</th><th>What it receives</th><th>Where</th></tr></thead>
+          <tbody>
+            <tr><td>Supabase</td><td>Sign-in, our servers, the encrypted backup, usage counts</td><td>Phone number, encrypted backup, usage counts, technical logs; Myra requests pass through on their way to Anthropic</td><td>India (Mumbai)</td></tr>
+            <tr><td>Anthropic</td><td>Myra's AI answers, meal and menu analysis, report reading</td><td>The request contents described in section 4</td><td>United States</td></tr>
+            <tr><td>ElevenLabs</td><td>Myra's natural voice</td><td>The text of Myra's replies you choose to hear</td><td>United States</td></tr>
+            <tr><td>Twilio</td><td>Sending your sign-in code by text message</td><td>Your phone number</td><td>United States</td></tr>
+            <tr><td>Apple</td><td>Apple Health, speech recognition, app distribution</td><td>As described in Apple's own privacy policy</td><td>Worldwide</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>This means your information may be processed outside the country where you live. Where the law requires it, we rely on appropriate safeguards for these transfers, such as standard contractual clauses.</p>
+      <p>We may also disclose information if the law requires it, to protect people's safety, or as part of a merger or sale of the business, in which case this policy would continue to apply to your information.</p>
+    </section>
+
+    <section id="never">
+      <h2>7. What we never do</h2>
+      <ul>
+        <li>We don't sell or rent your personal information.</li>
+        <li>We don't show ads or share your information with advertisers or data brokers.</li>
+        <li>We don't track you across other companies' apps or websites.</li>
+        <li>We don't use your health information for marketing.</li>
+      </ul>
+    </section>
+
+    <section id="keep">
+      <h2>8. How long we keep it</h2>
+      <ul>
+        <li><strong>On your iPhone</strong>: until you delete it, use "Delete everything", or remove the app.</li>
+        <li><strong>Encrypted backup</strong>: while the backup is on and your account exists. Turning the backup off or deleting everything removes it.</li>
+        <li><strong>Account and usage counts</strong>: until you delete your account with "Delete everything".</li>
+        <li><strong>Technical logs</strong>: kept by our providers for a limited time for security and troubleshooting, then deleted under their retention schedules.</li>
+        <li><strong>Requests to Myra</strong>: we don't keep a copy of your conversations on our servers beyond your encrypted backup. Our AI and voice providers may keep request data for a limited time under their own terms, for example to prevent abuse.</li>
+      </ul>
+    </section>
+
+    <section id="choices">
+      <h2>9. Your choices and rights</h2>
+      <p>In the app, under Settings:</p>
+      <ul>
+        <li><strong>Export my data</strong> gives you a copy of your information.</li>
+        <li><strong>Back up my data</strong> can be turned off, which deletes the cloud copy.</li>
+        <li><strong>Myra's natural voice</strong> can be turned off.</li>
+        <li><strong>Delete everything</strong> deletes your information from your iPhone and from Viora's servers, and closes your account. Apple Health data is not touched.</li>
+        <li><strong>Sign out</strong> keeps your information on the iPhone.</li>
+      </ul>
+      <p>Depending on where you live, for example in the European Union, the United Kingdom or California, you may also have the right to access, correct, delete or receive a copy of your information, to object to or restrict how we use it, and to withdraw your consent at any time. Email <span class="mail">hello@logicsols.com</span> and we'll reply within 30 days. You can also complain to your local data protection authority.</p>
+      <p>Because Viora handles health information, we rely on your explicit consent, given when you set up the app and connect Apple Health, to process it. You can withdraw that consent by disconnecting Apple Health or using "Delete everything".</p>
+    </section>
+
+    <section id="security">
+      <h2>10. Security</h2>
+      <p>Information travels between your iPhone and our servers over encrypted connections. Your backup is encrypted before it leaves your phone, and access to it on our side is limited to your own account. Your sign-in is stored in the iPhone's Keychain, and you can lock Viora with Face ID in Settings. No system is perfectly secure, but we work to protect your information and will tell you if a breach affects you where the law requires it.</p>
+    </section>
+
+    <section id="children">
+      <h2>11. Age limit</h2>
+      <p>Viora is meant for adults aged 18 and over. We don't knowingly collect information from anyone younger. If you believe a child has used Viora, contact us and we'll delete their information.</p>
+    </section>
+
+    <section id="medical">
+      <h2>12. Not medical advice</h2>
+      <p>Viora and Myra give general wellness guidance. They are not a medical device and do not diagnose or treat any condition. Myra never tells you to start, stop or change a medicine. Always talk to your doctor or pharmacist about your health, and call your local emergency number in an emergency.</p>
+    </section>
+
+    <section id="changes">
+      <h2>13. Changes and contact</h2>
+      <p>If we change this policy, we'll update the date at the top. If a change affects how we use your information in an important way, we'll tell you in the app before it takes effect.</p>
+      <p>Contact: Logistics Technology Solutions L.L.C., New York, USA · <span class="mail">hello@logicsols.com</span></p>
+    </section>
+
+    <footer>Viora Privacy Policy · Effective 24 October 2026</footer>
+  </main>
+</div>
+
+</body>
+</html>
